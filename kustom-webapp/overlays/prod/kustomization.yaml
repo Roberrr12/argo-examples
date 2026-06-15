@@ -1,9 +1,12 @@
-bases:
-- ../../base
+resources:
+  - ../../base
 
 patches:
- - replicas.yaml
+  - path: replicas.yaml
+    target:
+      kind: Deployment
+      name: YOUR_DEPLOYMENT_NAME
 
 configMapGenerator:
-- name: mykustom-map
-  env: config.properties
+  - name: mykustom-map
+    env: config.properties
