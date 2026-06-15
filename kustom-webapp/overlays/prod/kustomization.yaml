@@ -5,8 +5,7 @@ patches:
   - path: replicas.yaml
     target:
       kind: Deployment
-      name: YOUR_DEPLOYMENT_NAME
-
+      name: mywebapp
 configMapGenerator:
   - name: mykustom-map
     env: config.properties
